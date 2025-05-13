@@ -1,5 +1,5 @@
 
-import { Length, Area, Volume, Weight, Temperature, Currency, Percent, Ratio, Electric, Torque } from "lucide-react";
+import { Ruler, Square, Box, Scale, Thermometer, CircleDollarSign, Percent, GitCompare, Zap, Gauge } from "lucide-react";
 import ConverterLayout from "@/components/ConverterLayout";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import ConverterCard from "@/components/ConverterCard";
@@ -10,31 +10,31 @@ const converters = {
     {
       title: "Length",
       description: "Convert between meters, feet, inches and more",
-      icon: <Length className="w-6 h-6" />,
+      icon: <Ruler className="w-6 h-6" />,
       to: "/unit-converters/length",
     },
     {
       title: "Area",
       description: "Convert between square meters, acres, hectares and more",
-      icon: <Area className="w-6 h-6" />,
+      icon: <Square className="w-6 h-6" />,
       to: "/unit-converters/area",
     },
     {
       title: "Volume",
       description: "Convert between liters, gallons, cubic meters and more",
-      icon: <Volume className="w-6 h-6" />,
+      icon: <Box className="w-6 h-6" />,
       to: "/unit-converters/volume",
     },
     {
       title: "Weight",
       description: "Convert between kilograms, pounds, ounces and more",
-      icon: <Weight className="w-6 h-6" />,
+      icon: <Scale className="w-6 h-6" />,
       to: "/unit-converters/weight",
     },
     {
       title: "Temperature",
       description: "Convert between celsius, fahrenheit, kelvin and more",
-      icon: <Temperature className="w-6 h-6" />,
+      icon: <Thermometer className="w-6 h-6" />,
       to: "/unit-converters/temperature",
     },
   ],
@@ -66,7 +66,7 @@ const converters = {
     {
       title: "Ratio",
       description: "Convert ratios to decimals, percentages and fractions",
-      icon: <Ratio className="w-6 h-6" />,
+      icon: <GitCompare className="w-6 h-6" />,
       to: "/math-converters/ratio",
     },
   ],
@@ -74,13 +74,13 @@ const converters = {
     {
       title: "Torque",
       description: "Convert between newton meters, pound-feet and more",
-      icon: <Torque className="w-6 h-6" />,
+      icon: <Gauge className="w-6 h-6" />,
       to: "/engineering-converters/torque",
     },
     {
       title: "Electric Current",
       description: "Convert between amperes, milliamperes and more",
-      icon: <Electric className="w-6 h-6" />,
+      icon: <Zap className="w-6 h-6" />,
       to: "/engineering-converters/electric",
     },
   ],
@@ -88,13 +88,13 @@ const converters = {
     {
       title: "Currency",
       description: "Convert between USD, EUR, GBP and other currencies",
-      icon: <Currency className="w-6 h-6" />,
+      icon: <CircleDollarSign className="w-6 h-6" />,
       to: "/finance-calculators/currency",
     },
     {
       title: "Loan Calculator",
       description: "Calculate monthly payments, interest and total cost",
-      icon: <Currency className="w-6 h-6" />,
+      icon: <CircleDollarSign className="w-6 h-6" />,
       to: "/finance-calculators/loan",
     },
   ],
@@ -102,13 +102,13 @@ const converters = {
     {
       title: "BMI Calculator",
       description: "Calculate Body Mass Index from height and weight",
-      icon: <Weight className="w-6 h-6" />,
+      icon: <Scale className="w-6 h-6" />,
       to: "/utility-tools/bmi-calculator",
     },
     {
       title: "Age Calculator",
       description: "Calculate age in years, months, and days from birthdate",
-      icon: <Weight className="w-6 h-6" />,
+      icon: <Scale className="w-6 h-6" />,
       to: "/utility-tools/age-calculator",
     },
   ],

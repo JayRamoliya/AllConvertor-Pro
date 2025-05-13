@@ -1,5 +1,5 @@
 
-import { Electric, Torque } from "lucide-react";
+import { Zap, Gauge } from "lucide-react";
 import ConverterLayout from "@/components/ConverterLayout";
 import ConverterCard from "@/components/ConverterCard";
 
@@ -7,13 +7,13 @@ const engineeringConverters = [
   {
     title: "Torque",
     description: "Convert between newton meters, pound-feet and more",
-    icon: <Torque className="w-6 h-6" />,
+    icon: <Gauge className="w-6 h-6" />,
     to: "/engineering-converters/torque",
   },
   {
     title: "Electric Current",
     description: "Convert between amperes, milliamperes and more",
-    icon: <Electric className="w-6 h-6" />,
+    icon: <Zap className="w-6 h-6" />,
     to: "/engineering-converters/electric",
   },
 ];

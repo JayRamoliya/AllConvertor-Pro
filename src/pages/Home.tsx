@@ -1,5 +1,5 @@
 
-import { Length, Area, Volume, Weight, Temperature, Currency, Percent } from "lucide-react";
+import { Ruler, Square, Box, Scale, Thermometer, CircleDollarSign, Percent } from "lucide-react";
 import ConverterCard from "@/components/ConverterCard";
 import SearchBox from "@/components/SearchBox";
 import { useNavigate } from "react-router-dom";
@@ -8,37 +8,37 @@ const popularConverters = [
   {
     title: "Length",
     description: "Convert between meters, feet, inches and more",
-    icon: <Length className="w-6 h-6" />,
+    icon: <Ruler className="w-6 h-6" />,
     to: "/unit-converters/length",
   },
   {
     title: "Area",
     description: "Convert between square meters, acres, hectares and more",
-    icon: <Area className="w-6 h-6" />,
+    icon: <Square className="w-6 h-6" />,
     to: "/unit-converters/area",
   },
   {
     title: "Volume",
     description: "Convert between liters, gallons, cubic meters and more",
-    icon: <Volume className="w-6 h-6" />,
+    icon: <Box className="w-6 h-6" />,
     to: "/unit-converters/volume",
   },
   {
     title: "Weight",
     description: "Convert between kilograms, pounds, ounces and more",
-    icon: <Weight className="w-6 h-6" />,
+    icon: <Scale className="w-6 h-6" />,
     to: "/unit-converters/weight",
   },
   {
     title: "Temperature",
     description: "Convert between celsius, fahrenheit, kelvin and more",
-    icon: <Temperature className="w-6 h-6" />,
+    icon: <Thermometer className="w-6 h-6" />,
     to: "/unit-converters/temperature",
   },
   {
     title: "Currency",
     description: "Convert between USD, EUR, GBP and more currencies",
-    icon: <Currency className="w-6 h-6" />,
+    icon: <CircleDollarSign className="w-6 h-6" />,
     to: "/finance-calculators/currency",
   },
 ];
@@ -47,7 +47,7 @@ const categorySections = [
   {
     title: "Unit Converters",
     to: "/unit-converters",
-    icon: <Length className="w-5 h-5" />,
+    icon: <Ruler className="w-5 h-5" />,
   },
   {
     title: "Math Converters",
@@ -57,17 +57,17 @@ const categorySections = [
   {
     title: "Engineering",
     to: "/engineering-converters",
-    icon: <Length className="w-5 h-5" />,
+    icon: <Ruler className="w-5 h-5" />,
   },
   {
     title: "Finance",
     to: "/finance-calculators",
-    icon: <Currency className="w-5 h-5" />,
+    icon: <CircleDollarSign className="w-5 h-5" />,
   },
   {
     title: "Utilities",
     to: "/utility-tools",
-    icon: <Weight className="w-5 h-5" />,
+    icon: <Scale className="w-5 h-5" />,
   },
 ];
 

@@ -1,5 +1,5 @@
 
-import { Area } from "lucide-react";
+import { Square } from "lucide-react";
 import ConverterLayout from "@/components/ConverterLayout";
 import ConverterForm, { Unit } from "@/components/converters/ConverterForm";
 
@@ -47,7 +47,7 @@ const AreaConverter = () => {
       description="Convert between different units of area"
       backLink="/unit-converters"
       backLabel="Unit Converters"
-      icon={<Area className="w-5 h-5" />}
+      icon={<Square className="w-5 h-5" />}
     >
       <ConverterForm 
         title="Area Conversion"

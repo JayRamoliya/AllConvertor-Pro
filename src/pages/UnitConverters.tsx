@@ -1,5 +1,5 @@
 
-import { Length, Area, Volume, Weight, Temperature } from "lucide-react";
+import { Ruler, Square, Box, Scale, Thermometer } from "lucide-react";
 import ConverterLayout from "@/components/ConverterLayout";
 import ConverterCard from "@/components/ConverterCard";
 
@@ -7,31 +7,31 @@ const unitConverters = [
   {
     title: "Length",
     description: "Convert between meters, feet, inches and more",
-    icon: <Length className="w-6 h-6" />,
+    icon: <Ruler className="w-6 h-6" />,
     to: "/unit-converters/length",
   },
   {
     title: "Area",
     description: "Convert between square meters, acres, hectares and more",
-    icon: <Area className="w-6 h-6" />,
+    icon: <Square className="w-6 h-6" />,
     to: "/unit-converters/area",
   },
   {
     title: "Volume",
     description: "Convert between liters, gallons, cubic meters and more",
-    icon: <Volume className="w-6 h-6" />,
+    icon: <Box className="w-6 h-6" />,
     to: "/unit-converters/volume",
   },
   {
     title: "Weight",
     description: "Convert between kilograms, pounds, ounces and more",
-    icon: <Weight className="w-6 h-6" />,
+    icon: <Scale className="w-6 h-6" />,
     to: "/unit-converters/weight",
   },
   {
     title: "Temperature",
     description: "Convert between celsius, fahrenheit, kelvin and more",
-    icon: <Temperature className="w-6 h-6" />,
+    icon: <Thermometer className="w-6 h-6" />,
     to: "/unit-converters/temperature",
   },
 ];

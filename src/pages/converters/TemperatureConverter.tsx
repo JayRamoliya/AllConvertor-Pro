@@ -1,5 +1,5 @@
 
-import { Temperature } from "lucide-react";
+import { Thermometer } from "lucide-react";
 import ConverterLayout from "@/components/ConverterLayout";
 import ConverterForm, { Unit } from "@/components/converters/ConverterForm";
 
@@ -75,7 +75,7 @@ const TemperatureConverter = () => {
       description="Convert between Celsius, Fahrenheit, Kelvin, and Rankine scales"
       backLink="/unit-converters"
       backLabel="Unit Converters"
-      icon={<Temperature className="w-5 h-5" />}
+      icon={<Thermometer className="w-5 h-5" />}
     >
       <ConverterForm 
         title="Temperature Conversion"

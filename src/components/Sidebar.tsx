@@ -2,8 +2,8 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import { 
-  Length, Area, Volume, Weight, Temperature, Currency, 
-  Percent, Ratio, Electric, Torque, Search
+  Ruler, Square, Box, Scale, Thermometer, CircleDollarSign, 
+  Percent, GitCompare, Zap, Gauge, Search
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { ScrollArea } from "@/components/ui/scroll-area";
@@ -30,13 +30,13 @@ const categories: Category[] = [
   {
     title: "Unit Converters",
     path: "/unit-converters",
-    icon: Length,
+    icon: Ruler,
     children: [
-      { title: "Length", path: "/unit-converters/length", icon: Length },
-      { title: "Area", path: "/unit-converters/area", icon: Area },
-      { title: "Volume", path: "/unit-converters/volume", icon: Volume },
-      { title: "Weight", path: "/unit-converters/weight", icon: Weight },
-      { title: "Temperature", path: "/unit-converters/temperature", icon: Temperature },
+      { title: "Length", path: "/unit-converters/length", icon: Ruler },
+      { title: "Area", path: "/unit-converters/area", icon: Square },
+      { title: "Volume", path: "/unit-converters/volume", icon: Box },
+      { title: "Weight", path: "/unit-converters/weight", icon: Scale },
+      { title: "Temperature", path: "/unit-converters/temperature", icon: Thermometer },
     ],
   },
   {
@@ -48,31 +48,31 @@ const categories: Category[] = [
       { title: "Roman Numeral", path: "/math-converters/roman-numeral" },
       { title: "Fractions", path: "/math-converters/fractions" },
       { title: "Percentage", path: "/math-converters/percentage" },
-      { title: "Ratio", path: "/math-converters/ratio", icon: Ratio },
+      { title: "Ratio", path: "/math-converters/ratio", icon: GitCompare },
     ],
   },
   {
     title: "Engineering",
     path: "/engineering-converters",
-    icon: Electric,
+    icon: Zap,
     children: [
-      { title: "Torque", path: "/engineering-converters/torque", icon: Torque },
-      { title: "Electric", path: "/engineering-converters/electric", icon: Electric },
+      { title: "Torque", path: "/engineering-converters/torque", icon: Gauge },
+      { title: "Electric", path: "/engineering-converters/electric", icon: Zap },
     ],
   },
   {
     title: "Finance",
     path: "/finance-calculators",
-    icon: Currency,
+    icon: CircleDollarSign,
     children: [
-      { title: "Currency", path: "/finance-calculators/currency", icon: Currency },
+      { title: "Currency", path: "/finance-calculators/currency", icon: CircleDollarSign },
       { title: "Loan Calculator", path: "/finance-calculators/loan" },
     ],
   },
   {
     title: "Utilities",
     path: "/utility-tools",
-    icon: Weight,
+    icon: Scale,
     children: [
       { title: "BMI Calculator", path: "/utility-tools/bmi-calculator" },
       { title: "Age Calculator", path: "/utility-tools/age-calculator" },
