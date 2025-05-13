@@ -1,5 +1,5 @@
 
-import { Currency } from "lucide-react";
+import { CircleDollarSign } from "lucide-react";
 import ConverterLayout from "@/components/ConverterLayout";
 import ConverterCard from "@/components/ConverterCard";
 
@@ -7,14 +7,8 @@ const financeCalculators = [
   {
     title: "Currency",
     description: "Convert between USD, EUR, GBP and other currencies",
-    icon: <Currency className="w-6 h-6" />,
+    icon: <CircleDollarSign className="w-6 h-6" />,
     to: "/finance-calculators/currency",
-  },
-  {
-    title: "Loan Calculator",
-    description: "Calculate monthly payments, interest and total cost",
-    icon: <Currency className="w-6 h-6" />,
-    to: "/finance-calculators/loan",
   },
 ];
 
@@ -22,7 +16,7 @@ const FinanceCalculators = () => {
   return (
     <ConverterLayout
       title="Finance Calculators"
-      description="Tools for financial calculations and conversions"
+      description="Tools for financial calculations and currency conversion"
       backLink="/"
     >
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">

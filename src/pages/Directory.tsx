@@ -1,5 +1,5 @@
 
-import { Ruler, Square, Box, Scale, Thermometer, CircleDollarSign, Percent, GitCompare, Zap, Gauge } from "lucide-react";
+import { Ruler, Square, Box, Scale, Thermometer, CircleDollarSign } from "lucide-react";
 import ConverterLayout from "@/components/ConverterLayout";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import ConverterCard from "@/components/ConverterCard";
@@ -38,64 +38,12 @@ const converters = {
       to: "/unit-converters/temperature",
     },
   ],
-  math: [
-    {
-      title: "Number Base",
-      description: "Convert between decimal, binary, hexadecimal and octal",
-      icon: <Percent className="w-6 h-6" />,
-      to: "/math-converters/number-base",
-    },
-    {
-      title: "Roman Numeral",
-      description: "Convert between roman numerals and decimal numbers",
-      icon: <Percent className="w-6 h-6" />,
-      to: "/math-converters/roman-numeral",
-    },
-    {
-      title: "Fractions",
-      description: "Convert between decimals and fractions",
-      icon: <Percent className="w-6 h-6" />,
-      to: "/math-converters/fractions",
-    },
-    {
-      title: "Percentage",
-      description: "Calculate percentages, increases and decreases",
-      icon: <Percent className="w-6 h-6" />,
-      to: "/math-converters/percentage",
-    },
-    {
-      title: "Ratio",
-      description: "Convert ratios to decimals, percentages and fractions",
-      icon: <GitCompare className="w-6 h-6" />,
-      to: "/math-converters/ratio",
-    },
-  ],
-  engineering: [
-    {
-      title: "Torque",
-      description: "Convert between newton meters, pound-feet and more",
-      icon: <Gauge className="w-6 h-6" />,
-      to: "/engineering-converters/torque",
-    },
-    {
-      title: "Electric Current",
-      description: "Convert between amperes, milliamperes and more",
-      icon: <Zap className="w-6 h-6" />,
-      to: "/engineering-converters/electric",
-    },
-  ],
   finance: [
     {
       title: "Currency",
       description: "Convert between USD, EUR, GBP and other currencies",
       icon: <CircleDollarSign className="w-6 h-6" />,
       to: "/finance-calculators/currency",
-    },
-    {
-      title: "Loan Calculator",
-      description: "Calculate monthly payments, interest and total cost",
-      icon: <CircleDollarSign className="w-6 h-6" />,
-      to: "/finance-calculators/loan",
     },
   ],
   utilities: [
@@ -122,11 +70,9 @@ const Directory = () => {
       backLink="/"
     >
       <Tabs defaultValue="all" className="w-full">
-        <TabsList className="grid grid-cols-6 mb-6">
+        <TabsList className="grid grid-cols-4 mb-6">
           <TabsTrigger value="all">All</TabsTrigger>
           <TabsTrigger value="unit">Units</TabsTrigger>
-          <TabsTrigger value="math">Math</TabsTrigger>
-          <TabsTrigger value="engineering">Engineering</TabsTrigger>
           <TabsTrigger value="finance">Finance</TabsTrigger>
           <TabsTrigger value="utilities">Utilities</TabsTrigger>
         </TabsList>
@@ -135,8 +81,6 @@ const Directory = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
               ...converters.unit,
-              ...converters.math,
-              ...converters.engineering,
               ...converters.finance,
               ...converters.utilities,
             ].map((converter) => (
@@ -148,22 +92,6 @@ const Directory = () => {
         <TabsContent value="unit">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {converters.unit.map((converter) => (
-              <ConverterCard key={converter.title} {...converter} />
-            ))}
-          </div>
-        </TabsContent>
-
-        <TabsContent value="math">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {converters.math.map((converter) => (
-              <ConverterCard key={converter.title} {...converter} />
-            ))}
-          </div>
-        </TabsContent>
-
-        <TabsContent value="engineering">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {converters.engineering.map((converter) => (
               <ConverterCard key={converter.title} {...converter} />
             ))}
           </div>

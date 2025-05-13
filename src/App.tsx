@@ -19,8 +19,6 @@ import AgeCalculator from "./pages/utilities/AgeCalculator";
 import Directory from "./pages/Directory";
 import SearchResults from "./pages/SearchResults";
 import Feedback from "./pages/Feedback";
-import MathConverters from "./pages/MathConverters";
-import EngineeringConverters from "./pages/EngineeringConverters";
 import FinanceCalculators from "./pages/FinanceCalculators";
 import UtilityTools from "./pages/UtilityTools";
 
@@ -41,8 +39,6 @@ const App = () => (
             <Route path="unit-converters/volume" element={<VolumeConverter />} />
             <Route path="unit-converters/weight" element={<WeightConverter />} />
             <Route path="unit-converters/temperature" element={<TemperatureConverter />} />
-            <Route path="math-converters" element={<MathConverters />} />
-            <Route path="engineering-converters" element={<EngineeringConverters />} />
             <Route path="finance-calculators" element={<FinanceCalculators />} />
             <Route path="finance-calculators/currency" element={<CurrencyConverter />} />
             <Route path="utility-tools" element={<UtilityTools />} />

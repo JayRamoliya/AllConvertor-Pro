@@ -1,5 +1,5 @@
 
-import { Ruler, Square, Box, Scale, Thermometer, CircleDollarSign, Percent } from "lucide-react";
+import { Ruler, Square, Box, Scale, Thermometer, CircleDollarSign } from "lucide-react";
 import ConverterCard from "@/components/ConverterCard";
 import SearchBox from "@/components/SearchBox";
 import { useNavigate } from "react-router-dom";
@@ -50,16 +50,6 @@ const categorySections = [
     icon: <Ruler className="w-5 h-5" />,
   },
   {
-    title: "Math Converters",
-    to: "/math-converters",
-    icon: <Percent className="w-5 h-5" />,
-  },
-  {
-    title: "Engineering",
-    to: "/engineering-converters",
-    icon: <Ruler className="w-5 h-5" />,
-  },
-  {
     title: "Finance",
     to: "/finance-calculators",
     icon: <CircleDollarSign className="w-5 h-5" />,
@@ -84,7 +74,7 @@ const Home = () => {
         <h1 className="text-4xl sm:text-5xl font-bold mb-4 bg-gradient-to-r from-converter-primary to-converter-secondary bg-clip-text text-transparent">
           AllConvertor Pro
         </h1>
-        <p className="text-xl text-gray-600 max-w-2xl mx-auto mb-8">
+        <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto mb-8">
           Your all-in-one solution for unit conversions, calculations, and more
         </p>
         
@@ -95,7 +85,7 @@ const Home = () => {
 
       <section className="mb-12">
         <div className="flex items-center justify-between mb-6">
-          <h2 className="text-2xl font-bold">Popular Converters</h2>
+          <h2 className="text-2xl font-bold dark:text-white">Popular Converters</h2>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {popularConverters.map((converter) => (
@@ -106,9 +96,9 @@ const Home = () => {
 
       <section>
         <div className="flex items-center justify-between mb-6">
-          <h2 className="text-2xl font-bold">All Categories</h2>
+          <h2 className="text-2xl font-bold dark:text-white">All Categories</h2>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-5 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
           {categorySections.map((category) => (
             <ConverterCard
               key={category.title}

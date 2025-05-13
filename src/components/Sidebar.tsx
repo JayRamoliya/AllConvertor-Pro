@@ -3,7 +3,7 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import { 
   Ruler, Square, Box, Scale, Thermometer, CircleDollarSign, 
-  Percent, GitCompare, Zap, Gauge, Search, X
+  Search, X
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { ScrollArea } from "@/components/ui/scroll-area";
@@ -41,33 +41,11 @@ const categories: Category[] = [
     ],
   },
   {
-    title: "Math Converters",
-    path: "/math-converters",
-    icon: Percent,
-    children: [
-      { title: "Number Base", path: "/math-converters/number-base" },
-      { title: "Roman Numeral", path: "/math-converters/roman-numeral" },
-      { title: "Fractions", path: "/math-converters/fractions" },
-      { title: "Percentage", path: "/math-converters/percentage" },
-      { title: "Ratio", path: "/math-converters/ratio", icon: GitCompare },
-    ],
-  },
-  {
-    title: "Engineering",
-    path: "/engineering-converters",
-    icon: Zap,
-    children: [
-      { title: "Torque", path: "/engineering-converters/torque", icon: Gauge },
-      { title: "Electric", path: "/engineering-converters/electric", icon: Zap },
-    ],
-  },
-  {
     title: "Finance",
     path: "/finance-calculators",
     icon: CircleDollarSign,
     children: [
       { title: "Currency", path: "/finance-calculators/currency", icon: CircleDollarSign },
-      { title: "Loan Calculator", path: "/finance-calculators/loan" },
     ],
   },
   {
@@ -97,7 +75,7 @@ const Sidebar = ({ open, setOpen }: SidebarProps) => {
       {/* Sidebar */}
       <aside
         className={cn(
-          "fixed top-16 bottom-0 left-0 z-30 w-64 bg-white border-r shadow-sm transition-transform duration-300 md:translate-x-0 md:z-0",
+          "fixed top-16 bottom-0 left-0 z-30 w-64 bg-white border-r shadow-sm transition-transform duration-300 md:translate-x-0 md:z-0 dark:bg-gray-800 dark:border-gray-700",
           open ? "translate-x-0" : "-translate-x-full"
         )}
       >
@@ -124,8 +102,8 @@ const Sidebar = ({ open, setOpen }: SidebarProps) => {
                     cn(
                       "flex items-center gap-3 rounded-md px-3 py-2 text-sm font-medium transition-colors",
                       isActive
-                        ? "bg-converter-light text-converter-primary"
-                        : "text-gray-500 hover:bg-gray-100"
+                        ? "bg-converter-light text-converter-primary dark:bg-gray-700 dark:text-white"
+                        : "text-gray-500 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-700"
                     )
                   }
                   onClick={() => setOpen(false)}
@@ -146,8 +124,8 @@ const Sidebar = ({ open, setOpen }: SidebarProps) => {
                           cn(
                             "flex items-center gap-3 rounded-md px-3 py-1.5 text-sm transition-colors",
                             isActive
-                              ? "bg-converter-light text-converter-primary font-medium"
-                              : "text-gray-500 hover:bg-gray-100"
+                              ? "bg-converter-light text-converter-primary font-medium dark:bg-gray-700 dark:text-white"
+                              : "text-gray-500 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-700"
                           )
                         }
                         onClick={() => setOpen(false)}
