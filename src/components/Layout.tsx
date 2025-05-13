@@ -10,7 +10,10 @@ const Layout = () => {
 
   return (
     <div className="flex min-h-screen flex-col">
-      <Header toggleSidebar={() => setSidebarOpen(!sidebarOpen)} />
+      <Header 
+        toggleSidebar={() => setSidebarOpen(!sidebarOpen)} 
+        sidebarOpen={sidebarOpen} 
+      />
       
       <div className="flex flex-1">
         <Sidebar open={sidebarOpen} setOpen={setSidebarOpen} />

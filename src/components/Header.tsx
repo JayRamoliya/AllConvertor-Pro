@@ -1,15 +1,16 @@
 
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { Menu, Search } from "lucide-react";
+import { Menu, Search, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import SearchBox from "./SearchBox";
 
 interface HeaderProps {
   toggleSidebar: () => void;
+  sidebarOpen: boolean;
 }
 
-const Header = ({ toggleSidebar }: HeaderProps) => {
+const Header = ({ toggleSidebar, sidebarOpen }: HeaderProps) => {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const navigate = useNavigate();
 
@@ -25,11 +26,16 @@ const Header = ({ toggleSidebar }: HeaderProps) => {
           <Button 
             variant="ghost" 
             size="icon" 
-            className="md:hidden" 
+            className="flex md:flex" 
             onClick={toggleSidebar}
+            aria-label={sidebarOpen ? "Close sidebar" : "Open sidebar"}
           >
-            <Menu className="h-5 w-5" />
-            <span className="sr-only">Toggle navigation</span>
+            {sidebarOpen ? (
+              <X className="h-5 w-5" />
+            ) : (
+              <Menu className="h-5 w-5" />
+            )}
+            <span className="sr-only">{sidebarOpen ? "Close sidebar" : "Open sidebar"}</span>
           </Button>
           
           <Link to="/" className="flex items-center gap-2">

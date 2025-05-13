@@ -3,11 +3,12 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import { 
   Ruler, Square, Box, Scale, Thermometer, CircleDollarSign, 
-  Percent, GitCompare, Zap, Gauge, Search
+  Percent, GitCompare, Zap, Gauge, Search, X
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Separator } from "@/components/ui/separator";
+import { Button } from "@/components/ui/button";
 
 interface SidebarProps {
   open: boolean;
@@ -96,11 +97,23 @@ const Sidebar = ({ open, setOpen }: SidebarProps) => {
       {/* Sidebar */}
       <aside
         className={cn(
-          "fixed top-16 bottom-0 left-0 z-30 w-64 bg-white border-r shadow-sm transition-transform md:translate-x-0 md:z-0",
+          "fixed top-16 bottom-0 left-0 z-30 w-64 bg-white border-r shadow-sm transition-transform duration-300 md:translate-x-0 md:z-0",
           open ? "translate-x-0" : "-translate-x-full"
         )}
       >
-        <ScrollArea className="h-full py-4">
+        <div className="flex justify-end p-2 md:hidden">
+          <Button 
+            variant="ghost" 
+            size="icon" 
+            onClick={() => setOpen(false)}
+            className="md:hidden"
+          >
+            <X className="h-4 w-4" />
+            <span className="sr-only">Close sidebar</span>
+          </Button>
+        </div>
+
+        <ScrollArea className="h-[calc(100%-3rem)] py-4">
           <div className="px-4 space-y-4">
             {categories.map((category) => (
               <div key={category.title} className="space-y-2">
